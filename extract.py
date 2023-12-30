@@ -207,7 +207,7 @@ class Lesson:
                 for item in self.items
             ],
             "metadata": {
-                "dataset": "dw",
+                "dataset": "dwlg",
                 "split": split,
                 "extra": {
                     "id": self.id,
