@@ -143,12 +143,13 @@ archive_urls = [
     "https://learngerman.dw.com/de/top-thema-mit-vokabeln-archiv-2021/a-59401823",  # 2021
     "https://learngerman.dw.com/de/top-thema-mit-vokabeln-archiv-2022/a-60327880",  # 2022
     "https://learngerman.dw.com/de/top-thema-mit-vokabeln-archiv-2023/a-64276250",  # 2023
+    "https://learngerman.dw.com/de/top-thema-mit-vokabeln-archiv-2024/a-67825522",  # 2024
 ]
 for url in archive_urls:
     response = requests.get(url)
     response.encoding = response.apparent_encoding
     soup = BeautifulSoup(response.text, "html.parser")
-    for link in soup.select("div.recommendation-links a"):
+    for link in soup.select("a"):
         match = re.search(r"l-(\d+)/?$", link["href"])
         if match is not None:
             lesson_id = match.group(1)
@@ -165,12 +166,13 @@ archive_urls = [
     "https://learngerman.dw.com/de/video-thema-archiv-2021/a-59415031",  # 2021
     "https://learngerman.dw.com/de/video-thema-archiv-2022/a-60328502",  # 2022
     "https://learngerman.dw.com/de/video-thema-archiv-2023/a-64287824",  # 2023
+    "https://learngerman.dw.com/de/video-thema-archiv-2024/a-67826398",  # 2024
 ]
 for url in archive_urls:
     response = requests.get(url)
     response.encoding = response.apparent_encoding
     soup = BeautifulSoup(response.text, "html.parser")
-    for link in soup.select("div.recommendation-links a"):
+    for link in soup.select("a"):
         match = re.search(r"l-(\d+)/?$", link["href"])
         if match is not None:
             lesson_id = match.group(1)
@@ -192,7 +194,7 @@ for url in toc_urls:
     response = requests.get(url)
     response.encoding = response.apparent_encoding
     soup = BeautifulSoup(response.text, "html.parser")
-    for link in soup.select("ul.lesson-list li a"):
+    for link in soup.select("ul li a"):
         match = re.search(r"l-(\d+)/?$", link["href"])
         if match is not None:
             lesson_id = match.group(1)
@@ -210,7 +212,7 @@ for url in toc_urls:
     response = requests.get(url)
     response.encoding = response.apparent_encoding
     soup = BeautifulSoup(response.text, "html.parser")
-    for link in soup.select("ul.lesson-list li a"):
+    for link in soup.select("ul li a"):
         match = re.search(r"l-(\d+)/?$", link["href"])
         if match is not None:
             lesson_id = match.group(1)
