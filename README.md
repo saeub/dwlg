@@ -2,6 +2,8 @@
 
 This repository contains scripts for scraping and converting data from German language courses on the *Deutsche Welle – Learn German* website, and for reproducing the DWLG dataset.
 
+**Paper:** Andreas Säuberli and Simon Clematide. 2024. [Automatic Generation and Evaluation of Reading Comprehension Test Items with Large Language Models](https://aclanthology.org/2024.readi-1.3/). In *Proceedings of the 3rd Workshop on Tools and Resources for People with REAding DIfficulties (READI) @ LREC-COLING 2024*, pages 22–37, Torino, Italia. ELRA and ICCL.
+
 ## TL;DR
 
 To reproduce the DWLG dataset, the easiest way is to use the Docker image on DockerHub. You only need to install [Docker](https://docs.docker.com/get-docker/) and run the following commands.
