@@ -67,3 +67,26 @@ docker build -t saeub/dwlg .
 The following list contains known changes that *Deutsche Welle* made to courses that are part of the DWLG dataset (since May 2023). These changes are not reflected in the hash files in `splits/` and will therefore cause a hash mismatch when running the `extract.py` script:
 
 - Lesson 64273452 (`dev`): A missing whitespace was inserted.
+
+## Citation
+
+If you use this dataset, please cite the following paper:
+
+```bibtex
+@inproceedings{sauberli-clematide-2024-automatic,
+    title = "Automatic Generation and Evaluation of Reading Comprehension Test Items with Large Language Models",
+    author = {S{\"a}uberli, Andreas  and
+      Clematide, Simon},
+    editor = "Wilkens, Rodrigo  and
+      Cardon, R{\'e}mi  and
+      Todirascu, Amalia  and
+      Gala, N{\'u}ria",
+    booktitle = "Proceedings of the 3rd Workshop on Tools and Resources for People with REAding DIfficulties (READI) @ LREC-COLING 2024",
+    month = may,
+    year = "2024",
+    address = "Torino, Italia",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.readi-1.3/",
+    pages = "22--37"
+}
+```
